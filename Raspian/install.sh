@@ -55,7 +55,7 @@ echo "Created hash-pw from your produced password."
 echo "Password is:"
 echo $hashcode
 
-script_auth_none="131i adminAuth: {type: \"credentials\",users: [{username: \" admin\",password: \"`echo $hashcode`\",permissions: \"*\"}]},"
+script_auth_none="131i adminAuth: {type: \"credentials\",users: [{username: \"admin\",password: \"`echo $hashcode`\",permissions: \"*\"}]},"
 echo $script_auth_none > sed.cmd
 # Modify name of file for release
 sudo sed -i -f sed.cmd ~/.node-red/settings.js
